@@ -24,13 +24,14 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
+    gap: 20px;
 }
 
 header{}
 
 section{
-    max-width: min(96%,1200px);
+    max-width: min(96vw,1200px);
+    margin: 0 1rem;
 }
 
 .hero {
@@ -188,19 +189,20 @@ section{
 
 /* HERO SECTION IMAGE */
 .hero__img {
-    min-width: 50%;
-    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    margin: 3rem;
+    margin: 1rem;
 }
 .hero__img i{
     position: absolute;
-    top: 40%;
-    left: 33%;
+    top: 33%;
+    left: 30%;
     scale: 6;
     transform: translate(-50%, -50%);
     color: var(--primary-yellow);
-    rotate: -35deg;
+    rotate: -14deg;
     padding: 0.22rem;
     background-color: var(--primary-shadow);
     border-radius: 50%;
@@ -208,16 +210,55 @@ section{
 .hero__img .fa-laptop-code{
     aspect-ratio: 1/1;
     rotate: 39deg;
-    top: 30%;
-    left: 90%;
+    top: 33%;
+    left:76%;
 }
 .hero__img img{
-    position: absolute;
     scale: 0.8;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
     border-radius: 50%;
     border: 1rem solid var(--primary-shadow);
+}
+/* ------------------------- */
+
+/* ABOUT SECTION STARTS HERE */
+.about {
+    min-height: 180px;
+    max-height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.quote i {
+    position: absolute;
+    color: orange;
+    scale: 5;
+    opacity: 0.4;
+}
+
+.quote i:first-child{
+    top: 38%;
+    left: 0%;
+    transform: translateY(-0.5rem);
+}
+
+.quote i:last-child{
+    bottom: 38%;
+    right: 3%;
+    transform: translateY(0.5rem);
+}
+
+.quote h2 {
+    position: relative;
+    color: var(--primary-shadow);
+    z-index: 1;
 }
