@@ -30,12 +30,14 @@ body{
 header{}
 
 section{
-    max-width: min(90%,1400px);
+    max-width: min(96%,1200px);
 }
 
 .hero {
     min-height: 70vh;
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: center;
     justify-content: center;
 }
@@ -187,6 +189,7 @@ section{
     min-width: 50%;
     min-height: 300px;
     position: relative;
+    margin: 3rem;
 }
 .hero__img i{
     position: absolute;
