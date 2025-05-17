@@ -292,8 +292,25 @@ section{
 }
 
 .projects h2 {
+    font-size: 2rem;
     color: var(--primary-shadow);
     margin-bottom: 20px;
+    position: relative;
+}
+.projects h2::after{
+    content: '';
+    background-color: var(--primary-shadow);
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.2%;
+    height: 4px;
+    transition: all 0.18s ease-in-out;
+}
+
+.projects h2:hover::after{
+    width: 8%;
 }
 
 .project__container {
