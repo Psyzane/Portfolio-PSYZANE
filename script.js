@@ -21,7 +21,7 @@ document.querySelectorAll(".funky_btn").forEach((btn) => {
     });
 });
 
-// Projects Section 
+// PROJECTS SECTION
 let lastScrollTop = 0;
 window.addEventListener("scroll", function() {
     let currentScroll = window.scrollY;
@@ -37,4 +37,18 @@ window.addEventListener("scroll", function() {
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+});
+
+// FORM SECTION
+document.getElementById("form__btn").addEventListener("click", () => {
+    let Ele = document.getElementById("form__btn");
+    
+    setTimeout(() => {
+        Ele.classList.add("hold");
+    },200);
+
+    setTimeout(() => {
+        Ele.classList.remove("hold");
+    },2000);
+
 });
