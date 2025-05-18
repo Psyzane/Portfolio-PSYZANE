@@ -415,3 +415,51 @@ section{
     animation-timeline: view();
     animation-range: entry 3% cover 30%; 
 }
+
+/* CONTACT SECTION */
+.contact {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
