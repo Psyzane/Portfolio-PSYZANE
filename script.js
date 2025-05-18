@@ -1,3 +1,4 @@
+// FUNKY BUTTON ANIMATION
 document.querySelectorAll(".funky_btn").forEach((btn) => {
     btn.addEventListener("mousemove", (e) => {
         // Use clientX/clientY relative to the viewport
@@ -20,26 +21,20 @@ document.querySelectorAll(".funky_btn").forEach((btn) => {
     });
 });
 
-// document.querySelectorAll(".funky_btn").forEach((btn) => {
-//     btn.addEventListener("mouseover", (e) => {
-//         const x = (e.pageX - btn.offsetLeft);
-//         const y = (e.pageY - btn.offsetTop);
+// Projects Section 
+let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+    let currentScroll = window.scrollY;
+    let projectsElement = this.document.querySelector(".projects")
 
-//         console.log(btn.offsetLeft)
-//         console.log(e.pageX)
+    if (!projectsElement){return;}
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down, allow animation
+        projectsElement.style.setProperty("--animation-play-state", "running");
+    } else {
+        // Scrolling up, keep it paused
+        projectsElement.style.setProperty("--animation-play-state", "paused")
+    }
 
-//         btn.style.setProperty("--y-pos", y + "px");
-//         btn.style.setProperty("--x-pos", x + "px");
-//     });
-//     btn.addEventListener("mouseout", (e) => {
-
-//         setTimeout(()=>{
-//             const x = -10 ;
-//             const y = -10;
-
-//             btn.style.setProperty("--y-pos", y + "px");
-//             btn.style.setProperty("--x-pos", x + "px");
-//         },550)
-        
-//     })
-// });
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+});

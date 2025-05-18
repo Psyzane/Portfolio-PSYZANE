@@ -200,6 +200,7 @@ section{
     padding: 1rem;
 }
 .hero__img i{
+    aspect-ratio: 1/1;
     position: absolute;
     top: 33%;
     left: 30%;
@@ -212,7 +213,6 @@ section{
     border-radius: 50%;
 }
 .hero__img .fa-laptop-code{
-    aspect-ratio: 1/1;
     rotate: 39deg;
     top: 33%;
     left:76%;
@@ -273,22 +273,41 @@ section{
     padding: 50px;
     background-color: var(--secondary-color);
     text-align: center;
-    max-width: 100%;
     width: 100%;
     position: relative;
     background-color: transparent;
+    --animation-play-state: paused;
 }
-
 .projects::after{
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    width: 104%;
     height: 100%;
     background-color: var(--primaty-blue);
-    transform: skewY(-3deg);
+    transform: translate(-50%, -50%) skewY(-3deg);
+    opacity: 0;
     z-index: -1;
+
+    /* Animation */
+    animation: projects-section-slide-in forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; 
+    animation-play-state: var(--animation-play-state, paused);
+    -o-animation-play-state: var(--animation-play-state, paused);
+    -moz-animation-play-state: var(--animation-play-state, paused);
+    -webkit-animation-play-state: var(--animation-play-state, paused);
+}
+@keyframes projects-section-slide-in {
+    0%{
+        transform: translate(-400%, -30%) skewY(-3deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%, -50%) skewY(-3deg);
+        opacity: 1;
+    }
 }
 
 .projects h2 {
@@ -304,13 +323,13 @@ section{
     bottom: -5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 1.2%;
+    width: max(1.2%, 12px);
     height: 4px;
     transition: all 0.18s ease-in-out;
 }
 
 .projects h2:hover::after{
-    width: 8%;
+    width: max(8%, 80px);
 }
 
 .project__container {
@@ -394,5 +413,5 @@ section{
 .project__card {
     animation: fadeInUp linear;
     animation-timeline: view();
-    animation-range: entry 3% cover 30%; /* Starts at 50% of viewport height */
+    animation-range: entry 3% cover 30%; 
 }
