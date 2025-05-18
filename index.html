@@ -10,7 +10,8 @@
 <body>
     <header></header>
 
-    <section class="hero">
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
         <div class="hero__text">
             <i class="fa-solid fa-code"></i>
             <h1>I'm Psyzane,</h1>
@@ -27,7 +28,8 @@
         </div>
     </section>
 
-    <section class="about">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
         <div class="quote">
             <i class="fa-solid fa-quote-left"></i>
             <h2>Design meets code. Creativity meets logic. Welcome to my digital playground.</h2>
@@ -38,7 +40,7 @@
     <!-- <sections class="skills"></sections> -->
 
     <!-- Projects Section -->
-    <section class="projects">
+    <section id="projects" class="projects">
         <h2>Projects</h2>
 
         <div class="project__container">
@@ -74,7 +76,30 @@
 
     <sections class="FAQ"></sections>
 
-    <section class="contact"></section>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        
+        <div class="contact-links">
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+            <a href="https://instagram.com/your-profile" target="_blank">Instagram</a>
+            <a href="https://wa.me/06395343155" target="_blank">WhatsApp</a>
+            <a href="mailto:your-email@example.com">Email</a>
+        </div>
+
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Email</button>
+        </form>
+    </section>
 
     <footer></footer>
 
