@@ -439,10 +439,9 @@ section{
 .contact-links a {
     display: flex;
     align-items: center;
-    width: 50px;
+    width: calc(1.6rem + 20px);
     overflow: hidden;
-    background-color: #333;
-    color: white;
+    color: var(--primary-shadow);
     text-decoration: none;
     padding: 10px;
     border-radius: 50px;
@@ -509,7 +508,7 @@ form button p {
 }
 form button i {
     transform: translateY(100px);
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 }
 form button:hover{
     background-color: var(--primary-shadow);
@@ -517,7 +516,8 @@ form button:hover{
     transform: translateY(-1px);
     box-shadow: 2px 10px 2px var(--secondary-shadow),0 5px 0 var(--primary-yellow);
 }
-form button:active{
+form button:active,
+.hold{
     background-color: var(--primary-shadow);
     color: var(--primary-yellow);
     transform: translateY(1px);
