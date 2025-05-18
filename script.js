@@ -49,6 +49,6 @@ document.getElementById("form__btn").addEventListener("click", () => {
 
     setTimeout(() => {
         Ele.classList.remove("hold");
-    },2000);
+    },2600);
 
 });
