@@ -21,6 +21,23 @@ document.querySelectorAll(".funky_btn").forEach((btn) => {
     });
 });
 
+// SKILLS SECTION
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".badge").forEach((badge => {
+
+        let observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !badge.classList.contains("animate")) {
+                    console.log("yo"); // Debugging check
+                    badge.classList.add("animate");
+                }
+            });
+        }, { threshold: 0.5 }); // 50% visibility triggers animation
+
+        observer.observe(badge);
+    }))
+});
+
 // PROJECTS SECTION
 let lastScrollTop = 0;
 window.addEventListener("scroll", function() {
