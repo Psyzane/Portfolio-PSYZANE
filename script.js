@@ -23,19 +23,22 @@ document.querySelectorAll(".funky_btn").forEach((btn) => {
 
 // SKILLS SECTION
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".badge").forEach((badge => {
+    document.querySelectorAll(".badge").forEach((badge) => {
 
         let observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !badge.classList.contains("animate")) {
-                    console.log("yo"); // Debugging check
+                    console.log(); // Debugging check
                     badge.classList.add("animate");
                 }
             });
-        }, { threshold: 0.5 }); // 50% visibility triggers animation
-
+        }, { 
+            root:null,
+            rootMargin: '0px 0px -25% 0px',
+            threshold: 1 
+        }); 
         observer.observe(badge);
-    }))
+    })
 });
 
 // PROJECTS SECTION
