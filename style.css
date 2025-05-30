@@ -404,19 +404,22 @@ section {
   overflow: visible;
   position: relative;
 }
-.project__card img {
+.project__image img {
   position: absolute;
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  rotate: 20deg;
-  transform: translate(25%, 90%);
+  transform-origin: center;
+  rotate: 10deg;
+  left: 0;
+  top: 20%;
   transition: all 0.2s ease-in-out;
 }
-.project__card:hover img {
-  rotate: 0deg;
-  transform: translate(-50%, 0);
+.project__card:hover .project__image img {
+  left: -10%;
+  top: 0;
+  rotate: -15deg;
 }
 
 .project__card .project__info {
